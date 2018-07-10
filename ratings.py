@@ -12,7 +12,7 @@ def create_dictionary(file):
 		line = tuple(line.rstrip().split(":"))
 		restaurant_dict[line[0]] = line[1]
 
-	for k,v in restaurant_dict.items():
+	for k,v in sorted(restaurant_dict.items()):
 		print (k + " is rated at " + v + ".")
 
 
