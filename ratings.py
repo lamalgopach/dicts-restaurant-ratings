@@ -9,11 +9,11 @@ def create_dictionary(file):
 	
 
 	for line in file:
-		line = tuple(line.rstrip().split(":"))
-		restaurant_dict[line[0]] = line[1]
+		line = line.rstrip().split(":")
+		restaurant_dict[line[0]] = int(line[1])
 
 	for k,v in sorted(restaurant_dict.items()):
-		print (k + " is rated at " + v + ".")
+		print("{} is rated at {}.".format(k,v))
 
 
 file = open_file("scores.txt")
